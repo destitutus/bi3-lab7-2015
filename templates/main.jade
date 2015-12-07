@@ -1,0 +1,22 @@
+doctype html
+html(lang="en")
+  head
+    title Welcome
+    style
+        include ../css/main.css
+  body
+    include ./login.jade
+    h1 Welcome
+    p Welcome to lab7!
+    p Hack me if you can
+    div Main menu <br/>
+        if user
+            a(href="/profile/#{user.login}") Profile
+            span &nbsp;::&nbsp; 
+            a(href="/doctors") Doctors
+            span &nbsp;::&nbsp; 
+            a(href="/wall") Wall
+            span &nbsp;::&nbsp; 
+        a(href="/profiles") Users
+        span &nbsp;::&nbsp; 
+

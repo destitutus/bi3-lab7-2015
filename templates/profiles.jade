@@ -1,0 +1,13 @@
+doctype html
+html(lang="en")
+  head
+    title Welcome
+    style
+        include ../css/main.css
+  body
+    include ./login.jade    
+    p Profiles
+    ol
+        each val, index in accounts
+            li
+                a(href="/profile/" + val) #{val}                

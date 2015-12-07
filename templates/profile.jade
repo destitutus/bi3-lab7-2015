@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+    title Welcome
+    style
+        include ../css/main.css
+  body
+    include ./login.jade
+    if account
+        h1 User profile: #{username} 
+        p Details: #{account.details}
+        if account.gender
+            p Gender: Male
+        else
+            p Gender: Female
+        if user
+            if user.access != 'QUEST'
+                p Email: #{account.email}
+            if user.access == 'ADMIN'
+                p Password: #{account.password}
+                p Guid: #{account.id}
+             
+    else
+        h1 User profile #{username} not found

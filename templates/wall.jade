@@ -1,0 +1,13 @@
+div(class="wall")
+    p Hello #{user.login}
+    
+    each val, index in comments
+        div
+            hr
+            p User: #{val.login}, Date: #{val.created_time}
+            p Comment: #{val.comment}            
+
+    form(name="login-form", action="/addcomment", method="post")
+        textarea(name="comment",value="",cols=100,rows=10) 
+        br
+        input(type="submit",name="comment-btn",value="Add comment") 

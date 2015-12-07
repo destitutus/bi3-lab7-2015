@@ -1,0 +1,24 @@
+doctype html
+html(lang="en")
+  head
+    title Doctors
+    style
+        include ../css/main.css
+  body
+    include ./login.jade
+    p Doctors
+    ol
+        each val, index in doctors
+            li
+                a(href="/doctor/" + val.id) #{val.fio}
+                
+    if (parseInt(start) - parseInt(limit)) >= 0
+        a(href="/doctors/?start=" + (parseInt(start) - parseInt(limit))) Prev
+        span &nbsp;&nbsp;::
+
+    if (parseInt(start) + parseInt(limit)) < parseInt(count)
+        &nbsp;&nbsp;
+        a(href="/doctors/?start=" + (parseInt(start) + parseInt(limit))) Next                        
+                
+    
+

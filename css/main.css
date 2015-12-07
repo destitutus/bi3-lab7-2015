@@ -1,0 +1,20 @@
+/*
+    Document   : css/main．css
+    Created on : 2014-11-09 12:29 PM
+    Author     : dima
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+root {
+    display: block;
+}
+
+.login {
+    float: right;
+}
+
+.login input {
+    margin: 5px;
+}

@@ -1,0 +1,20 @@
+doctype html
+html(lang="en")
+  head
+    title Welcome
+    style
+        include ../css/main.css
+  body
+    include ./login.jade
+    p Doctor: #{doctor.fio}
+    if doctor.gender
+        p Gender: Female
+    else
+        p Gender: Male
+    p Profession: #{doctor.profession_name }
+    if user
+            if user.access != 'QUEST'
+                p Comments: #{doctor.comments}
+            if user.access == 'ADMIN'
+                p Salary: #{doctor. salary } rub
+      
