@@ -1,4 +1,4 @@
 BI3 LAB7
 =========
 
-Only for study! Don't use on production - code have SQL Injection
+Only for study! Don't use in production code - it have SQL Injections
